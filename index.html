@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <title>Fake User List</title>
+</head>
+
+<body>
+  <!-- Navbar List -->
+  <nav class="navbar navbar-expand-xl navbar-light bg-light p-0">
+    <div class="container-fluid p-4 bg-dark text-white">
+      <a class="navbar-brand text-light bg-dark bold-text" href="D:\Users\Beck\Desktop\VS\指標作業\index.html">遊戲角色介紹</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light bg-dark " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light bg-dark" href="D:\Users\Beck\Desktop\VS\指標作業\favorite.html">我的最愛</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="keyword">
+          <input class="form-control me-2" type="search" placeholder="搜尋角色名" aria-label="Search" id="search-input">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 輪播 (Carousel) -->
+  <div id="carouselExampleCaptions" class="carousel slide p-0 m-0 bg-secondary text-white" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="D:\Users\Beck\Downloads\55ccd259cca4f64ae81f2d113a153bae_8366165624319984079.png"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Users\Beck\Downloads\pngtree-game-big-scene-hd-cartoon-background-image-image_2207173.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="D:\Users\Beck\Downloads\pngtree-game-yellow-fairy-clouds-picture-image_2501609.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- User Modal -->
+  <div class="container-fluid  m-0 p-3 mb-2 bg-secondary text-white">
+    <div class="row justify-content-center m-0" id="data-panel">
+      <div class="col-sm-3">
+        <div class="mb-2">
+          <div class="card">
+            <img src="https://robohash.org/repellatvoluptateomnis.png?size=300x300&set=set1" class="card-img-top"
+              alt="User Poster" id="img1" />
+
+            <div class="card-body">
+              <h5 class="card-title">Tudor</h5>
+            </div>
+
+            <div class="card-footer" style="background-color: rgba(0, 0, 0, 0.753);">
+              <button class="btn btn-primary btn-show-user" data-bs-toggle="modal" data-bs-target="#user-modal">
+                More
+              </button>
+              <button class="btn btn-info btn-add-favorite">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="paginator">
+  
+    </ul>
+  </nav>
+ 
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="user-modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="user-modal-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <img src="https://robohash.org/adquibusdamconsequatur.png?size=300x300&set=set1" alt="user-poster"
+                class="img-fluid" id="user-modal-avatar" />
+            </div>
+            <div class="col-sm-4">
+              <p id="user-modal-id">id</p>
+              <p id="user-modal-name">name</p>
+              <p id="user-modal-surname">surname</p>
+              <p id="user-modal-email">email</p>
+              <p id="user-modal-gender">gender </p>
+              <p id="user-modal-age">age</p>
+              <p id="user-modal-region">region</p>
+              <p id="user-modal-birthday">birthday</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="./beck.js"></script>
+</body>
+
+</html>
